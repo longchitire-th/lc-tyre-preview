@@ -1,0 +1,14 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import ts from 'typescript';
+const code=ts.transpileModule(fs.readFileSync(new URL('./lib/service-config.ts',import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
+const {distanceKm,validCoordinates,validateServiceConfig}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+const c=JSON.parse(fs.readFileSync(new URL('./lib/service-catalog.json',import.meta.url),'utf8'));
+assert.equal(c.services.length,23);assert.equal(c.radiusKm,5);assert.equal(c.centerLat,13.837586119344286);assert.equal(c.centerLng,100.7122766048159);
+assert.equal(c.services.find(x=>x.id==='MS-01').price,400);assert.equal(c.services.find(x=>x.id==='MS-02').price,500);assert.equal(c.services.find(x=>x.id==='WA-01').price,800);
+assert.equal(c.services.find(x=>x.id==='TF-00').price,0);assert.ok(c.services.every(s=>s.en&&s.unitEn&&s.groupEn));assert.ok(!JSON.stringify(c.services).includes('10 กม.'));
+assert.equal(distanceKm(c.centerLat,c.centerLng,c.centerLat,c.centerLng),0);
+const offset=5/6371*180/Math.PI;assert.ok(Math.abs(distanceKm(c.centerLat,c.centerLng,c.centerLat+offset,c.centerLng)-5)<1e-8);
+assert.ok(distanceKm(c.centerLat,c.centerLng,c.centerLat+offset*1.001,c.centerLng)>5);
+assert.equal(validCoordinates(91,100),false);assert.equal(validCoordinates(13,181),false);assert.equal(validCoordinates(NaN,100),false);
+assert.equal(validateServiceConfig(c).radiusKm,5);assert.throws(()=>validateServiceConfig({...c,radiusKm:-1}));assert.throws(()=>validateServiceConfig({...c,centerLat:100}));assert.throws(()=>validateServiceConfig({...c,services:[{...c.services[0],price:-100}]}));
+const plugin=JSON.parse(fs.readFileSync(new URL('../lc-service-manager/service-catalog.json',import.meta.url),'utf8'));assert.deepEqual(plugin,c);
+console.log('PASS: 23 services, source prices, 5 km coverage boundary, supplied coordinates, invalid settings, WordPress default data parity.');

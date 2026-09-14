@@ -1,0 +1,9 @@
+'use client';
+import {useEffect,useState,type ReactNode} from 'react';
+import {Carousel,CarouselContent,CarouselItem,type CarouselApi} from '@/components/ui/carousel';
+export default function RotatingCards({children,label,lang='th',hero=false}:{children:ReactNode[];label:string;lang?:string;hero?:boolean}){
+ const [api,setApi]=useState<CarouselApi>(),[paused,setPaused]=useState(false),[hover,setHover]=useState(false),[index,setIndex]=useState(0);
+ useEffect(()=>{if(!api)return;const update=()=>setIndex(api.selectedScrollSnap());api.on('select',update);return()=>{api.off('select',update)}},[api]);
+ useEffect(()=>{if(!api||paused||hover||children.length<2||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const timer=setInterval(()=>{if(!document.hidden)api.scrollNext()},6500);return()=>clearInterval(timer)},[api,paused,hover,children.length]);
+ return <Carousel opts={{loop:true}} setApi={setApi} className={hero?'v3-slider hero-slider':'v3-slider'} aria-label={label} onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)} onFocusCapture={()=>setPaused(true)}><CarouselContent>{children.map((child,i)=><CarouselItem key={i} aria-label={`${i+1} / ${children.length}`}>{child}</CarouselItem>)}</CarouselContent>{children.length>1&&<div className="v3-slider-controls"><button onClick={()=>api?.scrollPrev()} aria-label={lang==='th'?'ก่อนหน้า':'Previous'}>←</button>{children.map((_,i)=><button key={i} aria-label={`${lang==='th'?'สไลด์':'Slide'} ${i+1}`} aria-current={index===i?'true':undefined} onClick={()=>api?.scrollTo(i)}>{i+1}</button>)}<button onClick={()=>api?.scrollNext()} aria-label={lang==='th'?'ถัดไป':'Next'}>→</button><button onClick={()=>setPaused(!paused)}>{paused?(lang==='th'?'เล่น':'Play'):(lang==='th'?'หยุด':'Pause')}</button></div>}</Carousel>;
+}

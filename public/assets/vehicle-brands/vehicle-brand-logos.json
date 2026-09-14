@@ -1,0 +1,200 @@
+[
+  {
+    "make": "AUDI",
+    "displayName": "AUDI",
+    "logo": "/assets/vehicle-brands/audi.svg",
+    "exists": true
+  },
+  {
+    "make": "AVATAR",
+    "displayName": "AVATR",
+    "logo": "/assets/vehicle-brands/avatar.svg",
+    "exists": true
+  },
+  {
+    "make": "BMW",
+    "displayName": "BMW",
+    "logo": "/assets/vehicle-brands/bmw.svg",
+    "exists": true
+  },
+  {
+    "make": "BYD",
+    "displayName": "BYD",
+    "logo": "/assets/vehicle-brands/byd.svg",
+    "exists": true
+  },
+  {
+    "make": "CHANGAN",
+    "displayName": "CHANGAN",
+    "logo": "/assets/vehicle-brands/changan.svg",
+    "exists": true
+  },
+  {
+    "make": "CHEVROLET",
+    "displayName": "CHEVROLET",
+    "logo": "/assets/vehicle-brands/chevrolet.svg",
+    "exists": true
+  },
+  {
+    "make": "FORD",
+    "displayName": "FORD",
+    "logo": "/assets/vehicle-brands/ford.svg",
+    "exists": true
+  },
+  {
+    "make": "GAC",
+    "displayName": "GAC",
+    "logo": "/assets/vehicle-brands/gac.svg",
+    "exists": true
+  },
+  {
+    "make": "GWM",
+    "displayName": "GWM",
+    "logo": "/assets/vehicle-brands/gwm.svg",
+    "exists": true
+  },
+  {
+    "make": "HAVAL",
+    "displayName": "HAVAL",
+    "logo": "/assets/vehicle-brands/haval.svg",
+    "exists": true
+  },
+  {
+    "make": "HONDA",
+    "displayName": "HONDA",
+    "logo": "/assets/vehicle-brands/honda.svg",
+    "exists": true
+  },
+  {
+    "make": "HYUNDAI",
+    "displayName": "HYUNDAI",
+    "logo": "/assets/vehicle-brands/hyundai.svg",
+    "exists": true
+  },
+  {
+    "make": "ISUZU",
+    "displayName": "ISUZU",
+    "logo": "/assets/vehicle-brands/isuzu.svg",
+    "exists": true
+  },
+  {
+    "make": "KIA",
+    "displayName": "KIA",
+    "logo": "/assets/vehicle-brands/kia.svg",
+    "exists": true
+  },
+  {
+    "make": "LEXUS",
+    "displayName": "LEXUS",
+    "logo": "/assets/vehicle-brands/lexus.svg",
+    "exists": true
+  },
+  {
+    "make": "MAZDA",
+    "displayName": "MAZDA",
+    "logo": "/assets/vehicle-brands/mazda.svg",
+    "exists": true
+  },
+  {
+    "make": "MERCEDES-BENZ",
+    "displayName": "MERCEDES-BENZ",
+    "logo": "/assets/vehicle-brands/mercedes-benz.svg",
+    "exists": true
+  },
+  {
+    "make": "MG",
+    "displayName": "MG",
+    "logo": "/assets/vehicle-brands/mg.svg",
+    "exists": true
+  },
+  {
+    "make": "MITSUBISHI",
+    "displayName": "MITSUBISHI",
+    "logo": "/assets/vehicle-brands/mitsubishi.svg",
+    "exists": true
+  },
+  {
+    "make": "NETA",
+    "displayName": "NETA",
+    "logo": "/assets/vehicle-brands/neta.png",
+    "exists": true
+  },
+  {
+    "make": "NISSAN",
+    "displayName": "NISSAN",
+    "logo": "/assets/vehicle-brands/nissan.svg",
+    "exists": true
+  },
+  {
+    "make": "OMODA",
+    "displayName": "OMODA",
+    "logo": "/assets/vehicle-brands/omoda.svg",
+    "exists": true
+  },
+  {
+    "make": "ORA",
+    "displayName": "ORA",
+    "logo": "/assets/vehicle-brands/ora.svg",
+    "exists": true
+  },
+  {
+    "make": "PEUGEOT",
+    "displayName": "PEUGEOT",
+    "logo": "/assets/vehicle-brands/peugeot.svg",
+    "exists": true
+  },
+  {
+    "make": "PORSCHE",
+    "displayName": "PORSCHE",
+    "logo": "/assets/vehicle-brands/porsche.svg",
+    "exists": true
+  },
+  {
+    "make": "SUBARU",
+    "displayName": "SUBARU",
+    "logo": "/assets/vehicle-brands/subaru.svg",
+    "exists": true
+  },
+  {
+    "make": "SUZUKI",
+    "displayName": "SUZUKI",
+    "logo": "/assets/vehicle-brands/suzuki.svg",
+    "exists": true
+  },
+  {
+    "make": "TESLA",
+    "displayName": "TESLA",
+    "logo": "/assets/vehicle-brands/tesla.svg",
+    "exists": true
+  },
+  {
+    "make": "TOYOTA",
+    "displayName": "TOYOTA",
+    "logo": "/assets/vehicle-brands/toyota.svg",
+    "exists": true
+  },
+  {
+    "make": "VOLKSWAGEN",
+    "displayName": "VOLKSWAGEN",
+    "logo": "/assets/vehicle-brands/volkswagen.svg",
+    "exists": true
+  },
+  {
+    "make": "VOLVO",
+    "displayName": "VOLVO",
+    "logo": "/assets/vehicle-brands/volvo.svg",
+    "exists": true
+  },
+  {
+    "make": "XPENG",
+    "displayName": "XPENG",
+    "logo": "/assets/vehicle-brands/xpeng.svg",
+    "exists": true
+  },
+  {
+    "make": "ZEEKR",
+    "displayName": "ZEEKR",
+    "logo": "/assets/vehicle-brands/zeekr.svg",
+    "exists": true
+  }
+]

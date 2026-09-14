@@ -1,0 +1,333 @@
+{
+  "checkedAt": "2026-09-08T12:00:00+07:00",
+  "note": "User-requested brand directory with locally cached reference logos. Sources are recorded per item. Brand presence is not a stock claim; confirm trademark usage rights before production.",
+  "brands": [
+    {
+      "name": "MICHELIN",
+      "logo": "/assets/brand-michelin.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/MICHELIN.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "BRIDGESTONE",
+      "logo": "/assets/brand-bridgestone.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/BRIDGESTONE.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "CONTINENTAL",
+      "logo": "/assets/brand-continental.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/CONTINENTAL.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "GOODYEAR",
+      "logo": "/assets/brand-goodyear.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/GOODYEAR.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "YOKOHAMA",
+      "logo": "/assets/brand-yokohama.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/YOKOHAMA.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "KUMHO",
+      "logo": "/assets/brand-kumho-official.svg",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.kumhotire.com/resources/images/common/menu_logo.svg",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "MAXXIS",
+      "logo": "/assets/brand-maxxis.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/MAXXIS.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "TOYO",
+      "logo": "/assets/brand-toyo.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/TOYO.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "APOLLO",
+      "logo": "/assets/brand-apollo.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/APOLLO.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "BF GOODRICH",
+      "logo": "/assets/brand-bf-goodrich.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/BF%20GOODRICH.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "COOPER",
+      "logo": "/assets/brand-cooper.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/COOPER.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "DAYTON",
+      "logo": "/assets/brand-dayton.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/DAYTON.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "DEESTONE",
+      "logo": "/assets/brand-deestone.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/DEESTONE.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "DUNLOP",
+      "logo": "/assets/brand-dunlop.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/DUNLOP.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "FALKEN",
+      "logo": "/assets/brand-falken.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/FALKEN.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "FIRESTONE",
+      "logo": "/assets/brand-firestone.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/FIRESTONE.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "GITI",
+      "logo": "/assets/brand-giti.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/GITI.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "GOODRIDE",
+      "logo": "/assets/brand-goodride.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/GOODRIDE.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "HANKOOK",
+      "logo": "/assets/brand-hankook.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/HANKOOK.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "NANKANG",
+      "logo": "/assets/brand-nankang.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/NANKANG.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "NEXEN",
+      "logo": "/assets/brand-nexen.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/NEXEN.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "NITTO",
+      "logo": "/assets/brand-nitto.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/NITTO.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "OTANI",
+      "logo": "/assets/brand-otani.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/OTANI.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "PIRELLI",
+      "logo": "/assets/brand-pirelli.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/PIRELLI.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "SAILUN",
+      "logo": "/assets/brand-sailun.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/SAILUN.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "ZESTINO",
+      "logo": "/assets/brand-zestino.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/ZESTINO.png",
+      "market": "Thailand",
+      "stockVerified": false
+    },
+    {
+      "name": "ACHILLES",
+      "logo": "/assets/brand-achilles.jpg",
+      "source": "https://www.blibli.com/brand/achilles",
+      "sourceImage": "https://www.static-src.com/wcsstore/Indraprastha/images/brandlogo/BR-M036969-00041/achilles-logo.jpg",
+      "stockVerified": false
+    },
+    {
+      "name": "ALLIANCE",
+      "logo": "/assets/brand-alliance.webp",
+      "source": "https://www.yokohama-atg.com/brand/alliance",
+      "sourceImage": "https://atgcustomapi.yokohama-atg.com/brand/6/a89ccbeb-e7df-40e5-8b30-39c09b7cc983_Alliance_Logo-Red.webp",
+      "stockVerified": false
+    },
+    {
+      "name": "ARISUN",
+      "logo": "/assets/brand-arisun.png",
+      "source": "https://www.carlogos.org/tire-brands/",
+      "sourceImage": "https://www.carlogos.org/tire-logos/arisun-logo.png",
+      "stockVerified": false
+    },
+    {
+      "name": "ATLAS",
+      "logo": "/assets/brand-atlas.png",
+      "source": "https://www.atlas-tires.com/",
+      "sourceImage": "https://www.atlas-tires.com/Atlas%20Tites.png",
+      "stockVerified": false
+    },
+    {
+      "name": "AUSTONE",
+      "logo": "/assets/brand-austone.webp",
+      "source": "https://www.austonetire.com/",
+      "sourceImage": "https://www.austonetire.com/assets/austone_logo_blk.50d600c4.webp",
+      "stockVerified": false
+    },
+    {
+      "name": "BLACKHAWK",
+      "logo": "/assets/brand-blackhawk.png",
+      "source": "https://blackhawktireusa.com/",
+      "sourceImage": "https://blackhawktireusa.com/wp-content/themes/blackhawk/static/imgs/logo-yellow.png",
+      "stockVerified": false
+    },
+    {
+      "name": "DOUBLE COIN",
+      "logo": "/assets/brand-double-coin-official.png",
+      "source": "https://www.doublecoinholdings.com/index_2.htm",
+      "sourceImage": "https://www.doublecoinholdings.com/uploadfile/2021/0602/20210602011515305.png",
+      "stockVerified": false
+    },
+    {
+      "name": "FORTUNE",
+      "logo": "/assets/brand-fortune.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/FORTUNE.png",
+      "stockVerified": false
+    },
+    {
+      "name": "GT RADIAL",
+      "logo": "/assets/brand-gt-radial.png",
+      "source": "https://www.carlogos.org/tire-brands/",
+      "sourceImage": "https://www.carlogos.org/tire-logos/gt-radial-logo.png",
+      "stockVerified": false
+    },
+    {
+      "name": "KAPSEN",
+      "logo": "/assets/brand-kapsen.png",
+      "source": "https://www.kapsentyre.com/",
+      "sourceImage": "https://www.kapsentyre.com/img/logo_KAPSEN.png",
+      "stockVerified": false
+    },
+    {
+      "name": "LANDSAIL",
+      "logo": "/assets/brand-landsail.png",
+      "source": "https://seeklogo.com/vector-logo/230708/landsail",
+      "sourceImage": "https://images.seeklogo.com/logo-png/23/1/landsail-logo-png_seeklogo-230708.png",
+      "stockVerified": false
+    },
+    {
+      "name": "LEAO",
+      "logo": "/assets/brand-leao-wide.png",
+      "source": "https://www.tirecoach.eu/",
+      "sourceImage": "https://www.tirecoach.eu/content/files/brands/leao_logo.png",
+      "stockVerified": false
+    },
+    {
+      "name": "LINGLONG",
+      "logo": "/assets/brand-linglong.png",
+      "source": "https://www.carlogos.org/tire-brands/",
+      "sourceImage": "https://www.carlogos.org/tire-logos/linglong-logo.png",
+      "stockVerified": false
+    },
+    {
+      "name": "MINERVA",
+      "logo": "/assets/brand-minerva.jpg",
+      "source": "https://autoshina.md/ro/cumpar-anvelope-de-iarna-minerva-reifen",
+      "sourceImage": "https://autoshina.md/upload/userfiles/images/minerva_logo_e-motors_ru%281%29.jpg",
+      "stockVerified": false
+    },
+    {
+      "name": "ROADX",
+      "logo": "/assets/brand-roadx.png",
+      "source": "https://roadxtire.ca/",
+      "sourceImage": "https://roadxtire.ca/wp-content/uploads/2023/01/roadx-logo-red-black-200w.png",
+      "stockVerified": false
+    },
+    {
+      "name": "TRIANGLE",
+      "logo": "/assets/brand-triangle.png",
+      "source": "https://www.carlogos.org/tire-brands/",
+      "sourceImage": "https://www.carlogos.org/tire-logos/triangle-logo.png",
+      "stockVerified": false
+    },
+    {
+      "name": "WESTLAKE",
+      "logo": "/assets/brand-westlake.png",
+      "source": "https://www.autotirechecking.com/",
+      "sourceImage": "https://www.autotirechecking.com/tirespec/images/ATC/logobrand/WESTLAKE.png",
+      "stockVerified": false
+    }
+  ]
+}
