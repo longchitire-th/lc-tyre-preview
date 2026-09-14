@@ -164,12 +164,13 @@ const safeLink = (s: string) =>
       }
     })());
 export default function StorefrontV3({
-  products,
+  products: initialProducts,
   brands,
 }: {
   products: Product[];
   brands: TireBrand[];
 }) {
+  const [products, setProducts] = useState<Product[]>(initialProducts);
   const [lang, setLang] = useState<Lang>('th');
   const t = (th: string, en: string) => (lang === 'th' ? th : en);
   const [settings, setSettings] = useState<StoreSettings>(initialSettings),
@@ -219,6 +220,24 @@ export default function StorefrontV3({
       const savedLang = localStorage.getItem('lc-language');
       if (urlLang === 'th' || urlLang === 'en') setLang(urlLang);
       else if (savedLang === 'th' || savedLang === 'en') setLang(savedLang);
+
+      // Load latest updated products from API or admin cache
+      fetch('/api/catalog')
+        .then((r) => (r.ok ? r.json() : null))
+        .then((d) => {
+          if (d && Array.isArray(d.products) && d.products.length > 0) {
+            setProducts(d.products);
+          }
+        })
+        .catch(() => {
+          const cached = localStorage.getItem('lc-admin-products');
+          if (cached) {
+            try {
+              const list = JSON.parse(cached);
+              if (Array.isArray(list) && list.length > 0) setProducts(list);
+            } catch {}
+          }
+        });
       const rawSettings = localStorage.getItem(key);
       if (rawSettings) {
         const x = JSON.parse(rawSettings);
@@ -616,15 +635,35 @@ export default function StorefrontV3({
         <span>
           {t('ตัวอย่าง v3 · เว็บจริงคงเดิม', 'Preview v3 · Live website unchanged')}
         </span>
-        <button
-          onClick={() => {
-            setAdminTab('brands');
-            setDialog('admin');
-          }}
-        >
-          <Settings2 size={14} />
-          {t('จัดการตัวอย่าง', 'Manage preview')}
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <button
+            onClick={() => {
+              setAdminTab('brands');
+              setDialog('admin');
+            }}
+          >
+            <Settings2 size={14} />
+            {t('จัดการตัวอย่าง', 'Manage preview')}
+          </button>
+          <a
+            href="/admin"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '5px',
+              background: '#ea580c',
+              color: '#ffffff',
+              padding: '3px 10px',
+              borderRadius: '8px',
+              fontSize: '11px',
+              fontWeight: 700,
+              textDecoration: 'none',
+              boxShadow: '0 2px 6px rgba(234, 88, 12, 0.3)',
+            }}
+          >
+            ✏️ {t('หลังบ้าน: แก้ไขสินค้า & วางข้อมูล', 'Admin CMS')}
+          </a>
+        </div>
       </div>
       <div className="store-top">
         <a className="brand-lockup" href="#">
