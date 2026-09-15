@@ -20,6 +20,9 @@ import {
   Sliders,
   Store,
   RefreshCw,
+  Lock,
+  LogOut,
+  KeyRound,
 } from 'lucide-react';
 
 interface Product {
@@ -66,6 +69,12 @@ const PRESET_IMAGES = [
 ];
 
 export default function AdminPage() {
+  // Auth state
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [authChecked, setAuthChecked] = useState(false);
+  const [passwordInput, setPasswordInput] = useState('');
+  const [loginError, setLoginError] = useState('');
+
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'list' | 'add' | 'bulk' | 'store'>('list');
@@ -96,6 +105,34 @@ export default function AdminPage() {
 
   const fileInputRef = useRef<HTMLInputElement>(null);
   const jsonImportRef = useRef<HTMLInputElement>(null);
+
+  // Check authentication on mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const auth = sessionStorage.getItem('lc_admin_auth');
+      if (auth === 'true') {
+        setIsAuthenticated(true);
+      }
+      setAuthChecked(true);
+    }
+  }, []);
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (passwordInput === '@Lc0985795449') {
+      sessionStorage.setItem('lc_admin_auth', 'true');
+      setIsAuthenticated(true);
+      setLoginError('');
+    } else {
+      setLoginError('รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่อีกครั้ง');
+    }
+  };
+
+  const handleLogout = () => {
+    sessionStorage.removeItem('lc_admin_auth');
+    setIsAuthenticated(false);
+    setPasswordInput('');
+  };
 
   // Load products
   useEffect(() => {
@@ -402,6 +439,76 @@ export default function AdminPage() {
     return matchSearch && matchBrand;
   });
 
+  // Lock screen if not authenticated
+  if (!authChecked) {
+    return (
+      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+        <RefreshCw size={24} className="animate-spin text-orange-500" />
+      </div>
+    );
+  }
+
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4">
+        <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
+          <div className="text-center mb-6">
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-orange-600/10 border border-orange-500/20 text-orange-500 mb-4 shadow-inner">
+              <Lock size={28} />
+            </div>
+            <h1 className="text-xl font-bold text-white tracking-wide">เข้าสู่ระบบจัดการหลังบ้าน</h1>
+            <p className="text-xs text-slate-400 mt-1">LC TYRE Admin Control Panel (เฉพาะผู้ดูแลระบบ)</p>
+          </div>
+
+          <form onSubmit={handleLogin} className="space-y-4">
+            <div>
+              <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                รหัสผ่านผู้ดูแลระบบ (Admin Password)
+              </label>
+              <div className="relative">
+                <input
+                  type="password"
+                  value={passwordInput}
+                  onChange={(e) => {
+                    setPasswordInput(e.target.value);
+                    if (loginError) setLoginError('');
+                  }}
+                  placeholder="กรอกรหัสผ่านเพื่อเข้าใช้งาน..."
+                  className="w-full bg-slate-950 border border-slate-800 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition"
+                  autoFocus
+                />
+              </div>
+              {loginError && (
+                <div className="flex items-center gap-1.5 text-rose-400 text-xs mt-2">
+                  <AlertCircle size={14} />
+                  <span>{loginError}</span>
+                </div>
+              )}
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-orange-600 hover:bg-orange-500 text-white font-semibold py-3 rounded-xl transition shadow-lg shadow-orange-600/20 text-sm flex items-center justify-center gap-2"
+            >
+              <KeyRound size={16} />
+              <span>ยืนยันและเข้าสู่ระบบ</span>
+            </button>
+          </form>
+
+          <div className="mt-6 pt-5 border-t border-slate-800/80 text-center">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-white transition"
+            >
+              <ArrowLeft size={14} />
+              <span>กลับสู่หน้าแรกเว็บไซต์</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 font-sans">
       {/* Top Header */}
@@ -444,6 +551,14 @@ export default function AdminPage() {
             >
               <Download size={15} />
               <span>ดาวน์โหลดสำรอง</span>
+            </button>
+            <button
+              onClick={handleLogout}
+              className="inline-flex items-center gap-1.5 bg-slate-800 hover:bg-rose-950/80 hover:text-rose-400 text-slate-300 text-xs px-3 py-2 rounded-lg border border-slate-700/50 hover:border-rose-900 transition"
+              title="ออกจากระบบ"
+            >
+              <LogOut size={15} />
+              <span className="hidden sm:inline">ออกจากระบบ</span>
             </button>
           </div>
         </div>

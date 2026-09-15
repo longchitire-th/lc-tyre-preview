@@ -631,40 +631,7 @@ export default function StorefrontV3({
       <a className="skip" href="#finder">
         {t('ข้ามไปค้นหายาง', 'Skip to tyre finder')}
       </a>
-      <div className="preview-ribbon">
-        <span>
-          {t('ตัวอย่าง v3 · เว็บจริงคงเดิม', 'Preview v3 · Live website unchanged')}
-        </span>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <button
-            onClick={() => {
-              setAdminTab('brands');
-              setDialog('admin');
-            }}
-          >
-            <Settings2 size={14} />
-            {t('จัดการตัวอย่าง', 'Manage preview')}
-          </button>
-          <a
-            href="/admin"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '5px',
-              background: '#ea580c',
-              color: '#ffffff',
-              padding: '3px 10px',
-              borderRadius: '8px',
-              fontSize: '11px',
-              fontWeight: 700,
-              textDecoration: 'none',
-              boxShadow: '0 2px 6px rgba(234, 88, 12, 0.3)',
-            }}
-          >
-            ✏️ {t('หลังบ้าน: แก้ไขสินค้า & วางข้อมูล', 'Admin CMS')}
-          </a>
-        </div>
-      </div>
+
       <div className="store-top">
         <a className="brand-lockup" href="#">
           <img src="/assets/long-ci-logo.png" alt="LONG CI GROUP" />
