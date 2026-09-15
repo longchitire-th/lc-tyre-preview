@@ -362,6 +362,21 @@ export default function AdminPage() {
         const year = parts[3].trim() || '2025';
         const price = Number(parts[4]?.replace(/[^0-9.]/g, '') || 3000);
         const regPrice = Number(parts[5]?.replace(/[^0-9.]/g, '') || price * 1.2);
+        const customImage = parts[6]?.trim();
+
+        // Smart image matching: 
+        // 1. If custom image URL provided in 7th column, use it.
+        // 2. Otherwise auto-match with existing tire of the same brand & model!
+        let matchedImage = customImage;
+        if (!matchedImage) {
+          const existingSameModel = [...newItems, ...products].find(
+            (p) =>
+              p.brand.toUpperCase() === brand.toUpperCase() &&
+              p.model.trim().toLowerCase() === model.toLowerCase() &&
+              p.image
+          );
+          matchedImage = existingSameModel?.image || '/assets/tire-4518.png';
+        }
 
         const newId = Date.now() + Math.floor(Math.random() * 10000) + lineNum;
         newItems.push({
@@ -375,7 +390,7 @@ export default function AdminPage() {
           regularPrice: regPrice,
           stock: true,
           runflat: false,
-          image: '/assets/tire-4518.png',
+          image: matchedImage,
         });
       }
     }
@@ -1056,18 +1071,18 @@ export default function AdminPage() {
             </div>
 
             {/* Template Example */}
-            <div className="bg-slate-900/70 p-3 rounded-xl border border-slate-800/80 mb-4">
-              <div className="flex items-center justify-between mb-1.5">
-                <span className="text-xs font-semibold text-orange-400">📋 รูปแบบข้อมูล (คั่นด้วย | หรือ Tab จาก Excel):</span>
+            <div className="bg-slate-900/70 p-3.5 rounded-xl border border-slate-800/80 mb-4 space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-semibold text-orange-400">📋 รูปแบบข้อมูล (คั่นด้วย | หรือ Copy จาก Excel วางได้เลย):</span>
                 <button
                   type="button"
                   onClick={() =>
                     setBulkText(
                       `MICHELIN | Primacy 4 | 205/55R16 | 2025 | 3800 | 4500\n` +
+                        `MICHELIN | Primacy 4 | 215/60R16 | 2025 | 4100 | 4900\n` +
                         `CONTINENTAL | UltraContact UC7 | 215/55R17 | 2025 | 3600 | 4200\n` +
                         `BRIDGESTONE | Turanza T005A | 215/50R17 | 2024 | 4100 | 4800\n` +
-                        `OTANI | KC2000 | 195/55R15 | 2025 | 1450 | 1800\n` +
-                        `KUMHO | Ecsta PS31 | 215/45R17 | 2025 | 1650 | 2100`
+                        `OTANI | KC2000 | 195/55R15 | 2025 | 1450 | 1800`
                     )
                   }
                   className="text-xs text-orange-500 hover:underline"
@@ -1075,9 +1090,12 @@ export default function AdminPage() {
                   คลิกเพื่อโหลดข้อมูลตัวอย่าง
                 </button>
               </div>
-              <pre className="text-[11px] font-mono text-slate-400 overflow-x-auto p-2 bg-slate-950 rounded-lg">
-                แบรนด์ | รุ่น | ขนาด | ปี | ราคาขายต่อเส้น | ราคาปกติ
+              <pre className="text-[11px] font-mono text-slate-300 overflow-x-auto p-2 bg-slate-950 rounded-lg">
+                แบรนด์ | รุ่น | ขนาด | ปี | ราคาขายต่อเส้น | ราคาปกติ | รูปภาพ (URL หรือใส่ว่างไว้)
               </pre>
+              <p className="text-[11px] text-emerald-400/90 leading-relaxed">
+                ✨ <strong>ระบบจับคู่รูปอัตโนมัติ:</strong> ยางรุ่นเดียวกัน (เช่น Primacy 4) ระบบจะดึงรูปที่มีอยู่ในร้านมาใส่ให้ทุกขนาดอัตโนมัติทันที ไม่ต้องเหนื่อยใส่รูปทีละแถว! หรือหากต้องการใส่ URL รูปเอง สามารถวางไว้ที่ช่องสุดท้ายได้ครับ
+              </p>
             </div>
 
             {/* Textarea */}
